@@ -77,9 +77,9 @@
                     { item: "WOWPASS 實體卡", category: "金流" },
                     { item: "韓國轉接頭 (Type C/F)", category: "電子" },
                     { item: "eSIM / 實體卡", category: "網路" },
-                    { item: "常備藥品", category: "醫藥" },
-                    { item: "舒適球鞋", category: "衣物" },
-                    { item: "輕薄羽絨 / 防風外套", category: "衣物" },
+                    { item: "常備藥 (感冒、腸胃、止痛)", category: "醫藥" },
+                    { item: "舒適球鞋 (釜山非常多斜坡)", category: "衣物" },
+                    { item: "輕薄羽絨 / 風衣", category: "衣物" },
                     { item: "個人盥洗用品", category: "洗漱" }
                 ],
                 entryGuides: [
@@ -105,10 +105,10 @@
                     }
                 ],
                 koreaTips2026: [
-                    "支付趨勢：<b>WOWPASS</b> 已成為目前最主流的交通與消費整合卡。",
+                    "支付趨勢：<b>WOWPASS</b> 是目前整合支付與交通最便利的工具。",
                     "環保政策：2026 韓國飯店不主動提供牙刷刮鬍刀，務必自備。",
                     "自助服務：大部分餐廳已使用 <b>Kiosk</b> 機器，推薦使用 Papago 拍照翻譯。",
-                    "氣溫提醒：3 月溫差極大 (5-15度)，海邊海風強勁需穿防風外套。",
+                    "三月氣候：平均 5-15 度。白天有太陽溫暖，傍晚海邊風極大且冷。",
                     "超市公休：樂天與 EMart 每月第 2、4 個週日公休 (3/8 週日)。"
                 ]
             };
@@ -116,10 +116,11 @@
             const itinerary = [
                 {
                     day: "Day 1", date: "3/4 (三)", title: "抵達！廣安里夜色",
-                    color: "bg-pink-50", accent: "text-pink-500", border: "border-pink-200", tape: "bg-pink-400/20",
+                    color: "bg-[#fff5f5]", accent: "text-pink-500", border: "border-pink-200", tape: "bg-pink-400/20",
+                    weather: "Sunny 5°C - 13°C", weatherIcon: "sun",
                     precautions: ["機場先儲值 T-money 卡", "民樂活魚中心先買魚再吃湯飯", "推薦 世宗上會 1F 買生魚片"],
                     alts: [
-                        { name: "陜川一流豬肉湯飯", url: "https://naver.me/xBwk8JHT", desc: "沙上站名店，蒜味極濃推薦。", transitA: "計程車 5 分", transitB: "沙上站步行 5 分", hours: "24 小時營業", address: "14 Gwaebeop-ro, Sasang-gu" },
+                        { name: "陜川一流豬肉湯飯", url: "https://naver.me/xBwk8JHT", desc: "沙上站名店，蒜味極濃推薦。", transitA: "計程車 5 分", transitB: "沙上站步行 5 分", hours: "24 小時", address: "14 Gwaebeop-ro, Sasang-gu" },
                         { name: "草梁小麥麵", url: "https://naver.me/FpM6Y2U9", desc: "釜山站對面，Q彈涼麵代表。", transitA: "計程車 5 分", transitB: "釜山站 7 號出口", hours: "10:00 - 22:00", address: "225 Jungang-daero" }
                     ],
                     events: [
@@ -130,24 +131,10 @@
                     ]
                 },
                 {
-                    day: "Day 2", date: "3/5 (四)", title: "甘川文化與廣安烤肉",
-                    color: "bg-[#f0f9ff]", accent: "text-sky-500", border: "border-sky-200", tape: "bg-sky-400/20",
-                    precautions: ["甘川洞坡度陡穿運動鞋", "手翻書製作約 15 分鐘", "83haechi 烤肉回廣安里後建議先去現場抽號碼牌"],
-                    alts: [
-                        { name: "密陽家豬肉湯飯", url: "https://naver.me/G8tO4HRE", desc: "札嘎其市場內老店風味。", transitA: "步行約 5 分", transitB: "地鐵札嘎其站 7 號出口", hours: "08:30 - 20:00", address: "35 Junggu-ro 47beon-gil" }
-                    ],
-                    events: [
-                        { time: "09:30", title: "飯店出發 ➔ 甘川洞", icon: "home", transitA: "計程車: 30 分, ₩15,000", transitB: "地鐵2轉1線至[土城站]轉公車 2-2 (約 55 分)", hours: "09:00 開", address: "203, Gamnae 2-ro", desc: "搭計程車到村口旅客中心最省力。✨" },
-                        { time: "10:00", title: "甘川景點與手翻書", icon: "camera", transitA: "小王子/燈塔/彩虹階梯", transitB: "手翻書製作", hours: "10:00 - 18:30", address: "Move It Shop", desc: "製作 8 秒短片做成專屬手翻書，甘川洞必買紀念品！📖" },
-                        { time: "13:00", title: "元祖釜山豬腳", icon: "utensils", transitA: "計程車 15 分", transitB: "公車+地鐵 (約 30 分)", hours: "至 24:00", address: "南浦洞", desc: "<b>必吃</b> 酸甜涼拌豬腳，南浦洞必訪名店。🐷" },
-                        { time: "14:30", title: "光復路商圈 & BIFF 廣場", icon: "shopping-bag", transitA: "步行探索", transitB: "商圈巡禮", hours: "至 22:00", address: "Kakao Friends", desc: "逛 Kakao 總店並品嚐 BIFF 廣場著名的元祖黑糖餅。🛍️" },
-                        { time: "18:30", title: "83haechi 烤肉 (晚餐)", icon: "sparkles", transitA: "計程車回廣安里 25 分", transitB: "地鐵轉乘 (約 45 分)", hours: "至 01:00", address: "11, Millak-ro, Suyeong-gu", desc: "<b>指定</b> 廣安里超人氣烤肉，肉質極佳且專人代烤！🥩" }
-                    ]
-                },
-                {
-                    day: "Day 3", date: "3/6 (五)", title: "膠囊列車與海雲台夜市",
+                    day: "Day 2", date: "3/5 (四)", title: "膠囊列車與海雲台夜市",
                     color: "bg-[#fffdf2]", accent: "text-amber-500", border: "border-amber-200", tape: "bg-amber-400/20",
-                    precautions: ["預約 09:30 務必準時抵達報到", "LIBERTA 咖啡景觀第一排", "Spa Land 憑 Pass 4小時免費"],
+                    weather: "Partly Cloudy 6°C - 14°C", weatherIcon: "cloud-sun",
+                    precautions: ["預約 09:30 務必準時報到", "海雲台夜市攤位多元", "Spa Land 限 4 小時"],
                     alts: [
                         { name: "尾浦家 미포집", url: "https://naver.me/G6fN0v1o", desc: "超華麗醃漬海鮮拼盤。", transitA: "步行 2 分", transitB: "尾浦站旁", hours: "11:00 - 21:00", address: "3 Dalmaji-gil 62beon-gil" },
                         { name: "名品海鮮湯貝類燒烤", url: "https://naver.me/5UENWaxu", desc: "海雲台大街豪邁海鮮鍋。", transitA: "步行 8 分", transitB: "海雲台站 5 號出口", hours: "11:30 - 01:00", address: "42 Gunam-ro" },
@@ -159,32 +146,50 @@
                     events: [
                         { time: "09:00", title: "飯店出發 ➔ 尾浦站", icon: "car", transitA: "Uber 直達: 20 分", transitB: "地鐵+步行", hours: "09:20 抵達", address: "海雲台藍線公園", desc: "準備前往報到。" },
                         { time: "09:30", title: "天空膠囊列車 (報到)", icon: "check-circle-2", transitA: "尾浦 ➔ 青沙浦", transitB: "預約時段", hours: "09:30 - 10:00", address: "報到窗口", desc: "<b>重要</b> 必須在 <b>09:30 - 10:00</b> 之間準時報到掃票！這段航程海景無敵。🌊" },
-                        { time: "12:30", title: "午餐：道熙家烤蛤蜊", icon: "utensils", transitA: "步行 5 分鐘", transitB: "步行", hours: "至 24:00", address: "도희네 (Cheongsapo)", desc: "海邊享受鮮甜烤蛤蜊。🐚" },
-                        { time: "14:30", title: "LIBERTA 青沙浦", icon: "coffee", transitA: "步行 3 分鐘", transitB: "精品咖啡", hours: "至 22:00", address: "137, Cheongsapo-ro", desc: "<b>指定</b> 無死角海景精品店，空間開闊。☕" },
-                        { time: "18:00", title: "古來思魚糕 & 夜市", icon: "shopping-bag", transitA: "步行 8 分鐘", transitB: "海雲台商圈", hours: "至 21:30", address: "海雲台店", desc: "<b>指定</b> 吃起司魚糕，逛海雲台市場夜市。🍢" },
+                        { time: "12:30", title: "午餐：道熙家烤蛤蜊", icon: "utensils", transitA: "步行 5 分鐘", transitB: "步行", hours: "至 24:00", address: "都熙家", desc: "海邊享受鮮甜烤蛤蜊。🐚" },
+                        { time: "14:30", title: "LIBERTA 青沙浦", icon: "coffee", transitA: "步行 3 分", transitB: "精品咖啡", hours: "至 22:00", address: "137, Cheongsapo-ro", desc: "<b>指定</b> 無死角海景精品店，空間開闊。☕" },
+                        { time: "18:00", title: "古來思魚糕 & 夜市", icon: "shopping-bag", transitA: "步行 8 分", transitB: "海雲台商圈", hours: "至 21:30", address: "海雲台店", desc: "<b>指定</b> 吃起司魚糕，逛海雲台市場夜市。🍢" },
                         { time: "20:00", title: "Spa Land 汗蒸幕", icon: "moon", transitA: "Uber 15 分", transitB: "地鐵至[Centum City]", hours: "至 22:00", address: "新世界百貨 1F", desc: "徹底消除前幾天的旅行疲勞。♨️" }
+                    ]
+                },
+                {
+                    day: "Day 3", date: "3/6 (五)", title: "甘川文化與廣安烤肉",
+                    color: "bg-[#f0f9ff]", accent: "text-sky-500", border: "border-sky-200", tape: "bg-sky-400/20",
+                    weather: "Sunny 4°C - 12°C", weatherIcon: "sun",
+                    precautions: ["甘川洞坡度陡穿運動鞋", "手翻書製作約 15 分鐘", "83haechi 烤肉回廣安里後建議先去現場抽號碼牌"],
+                    alts: [
+                        { name: "密陽家豬肉湯飯", url: "https://naver.me/G8tO4HRE", desc: "札嘎其市場內老店風味。", transitA: "步行約 5 分", transitB: "地鐵札嘎其站 7 號出口", hours: "08:30 - 20:00", address: "35 Junggu-ro 47beon-gil" }
+                    ],
+                    events: [
+                        { time: "09:30", title: "飯店出發 ➔ 甘川洞", icon: "home", transitA: "計程車: 30 分, ₩15,000", transitB: "地鐵2轉1線至[土城站]轉公車 2-2 (約 55 分)", hours: "09:00 開", address: "203, Gamnae 2-ro", desc: "搭計程車到村口旅客中心最省力。✨" },
+                        { time: "10:00", title: "甘川景點與手翻書", icon: "camera", transitA: "拍照點步行", transitB: "手翻書製作", hours: "10:00 - 18:30", address: "Move It Shop", desc: "製作 8 秒短片做成專屬手翻書，甘川洞必買紀念品！📖" },
+                        { time: "13:00", title: "元祖釜山豬腳", icon: "utensils", transitA: "計程車 15 分", transitB: "公車+地鐵 (約 30 分)", hours: "至 24:00", address: "南浦洞", desc: "<b>必吃</b> 酸甜涼拌豬腳，南浦洞必訪名店。🐷" },
+                        { time: "14:30", title: "光復路商圈 & BIFF 廣場", icon: "shopping-bag", transitA: "步行探索", transitB: "商圈巡禮", hours: "至 22:00", address: "Kakao Friends", desc: "逛 Kakao 總店並品嚐 BIFF 廣場著名的元祖黑糖餅。🛍️" },
+                        { time: "18:30", title: "83haechi 烤肉", icon: "sparkles", transitA: "計程車回廣安里 25 分", transitB: "地鐵 45 分", hours: "至 01:00", address: "11, Millak-ro, Suyeong-gu", desc: "<b>指定</b> 廣安里超人氣烤肉，肉質極佳且有專人代烤！🥩" }
                     ]
                 },
                 {
                     day: "Day 4", date: "3/7 (六)", title: "廣安早午餐與西面老花園",
                     color: "bg-[#f5f3ff]", accent: "text-purple-500", border: "border-purple-200", tape: "bg-purple-400/20",
+                    weather: "Cloudy 7°C - 15°C", weatherIcon: "cloud",
                     precautions: ["Working Holiday 週六建議早點去", "行李寄放 Avani 飯店", "Strut Coffee 職人推薦"],
                     alts: [
-                        { name: "釜山宅烤肉", url: "https://naver.me/GvXzYqY6", desc: "烤好上桌的豪邁五花肉。", transitA: "步行 10 分", transitB: "西面站 6 號出口", hours: "17:00 - 24:00", address: "14 Dongcheon-ro" },
+                        { name: "釜山宅烤肉", url: "https://naver.me/GvXzYqY6", desc: "烤好上桌的大份量五花肉。", transitA: "步行 10 分", transitB: "西面站 6 號出口", hours: "17:00 - 24:00", address: "14 Dongcheon-ro" },
                         { name: "松亭3代湯飯", url: "https://naver.me/FFv9N6D0", desc: "24小時湯飯街鼻祖。", transitA: "步行 3 分", transitB: "西面站 1 號出口", hours: "24H", address: "33 Seomyeon-ro" }
                     ],
                     events: [
-                        { time: "10:00", title: "Working Holiday 早午餐", icon: "utensils", transitA: "步行 10 分", transitB: "早午餐時光", hours: "09:00 - 18:00", address: "廣安里店", desc: "<b>指定</b> 質感澳式早午餐。🥑" },
+                        { time: "10:00", title: "Working Holiday 早午餐", icon: "utensils", transitA: "步行 10 分鐘", transitB: "廣安里", hours: "09:00 - 18:00", address: "廣安里店", desc: "<b>指定</b> 澳式風格早午餐。🥑" },
                         { time: "11:30", title: "住宿 ➔ 阿瓦尼飯店", icon: "log-out", transitA: "計程車: 20 分, ₩10,000", transitB: "地鐵 2 號線", hours: "行李寄放", address: "133 Jeonpo-daero", desc: "搬家到西面區寄放行李，開逛。🛍️" },
-                        { time: "15:30", title: "田浦文創 / Strut Coffee", icon: "coffee", transitA: "步行探索", transitB: "咖啡漫步", hours: "店休前抵達", address: "Strut Coffee", desc: "<b>指定</b> 精品咖啡。<b>關店前 2-3 小時</b> 抵達最悠閒。☕" },
-                        { time: "18:30", title: "Old Mansion 老花園 (晚餐)", icon: "utensils", transitA: "步行 10 分鐘", transitB: "西面站周邊", hours: "至 01:00", address: "老花園西面店", desc: "<b>指定</b> 復古紅磚高質感烤肉，氛圍滿分！🥩" },
-                        { time: "20:30", title: "西面青春街人生四格", icon: "smartphone", transitA: "步行探索", transitB: "步行", hours: "24H", address: "Seomyeon Youth St", desc: "拍張人生四格留念，體驗夜生活！✨" }
+                        { time: "15:30", title: "Strut Coffee", icon: "coffee", transitA: "步行探索", transitB: "咖啡漫步", hours: "店休前 2-3h", address: "Strut Coffee", desc: "<b>指定</b> 精品咖啡。<b>關店前 2-3 小時</b> 抵達最悠閒。☕" },
+                        { time: "18:30", title: "Old Mansion 老花園", icon: "utensils", transitA: "步行 10 分鐘", transitB: "西面", hours: "至 01:00", address: "西面老花園", desc: "<b>指定</b> 復古紅磚高質感烤肉，氛圍滿分！🥩" },
+                        { time: "20:30", title: "西面青春街人生四格", icon: "smartphone", transitA: "步行探索", transitB: "步行", hours: "24H", address: "Seomyeon Youth St", desc: "拍張【人生四格】留念，體驗夜生活！✨" }
                     ]
                 },
                 {
                     day: "Day 5", date: "3/8 (日)", title: "海鮮粥與白淺灘之美",
                     color: "bg-[#f2fdfa]", accent: "text-teal-500", border: "border-teal-200", tape: "bg-teal-400/20",
-                    precautions: ["濟州家鮑魚粥暖胃首選", "注意樂天超市公休日", "海岸隧道排隊拍照約 15 分鐘"],
+                    weather: "Sunny 5°C - 14°C", weatherIcon: "sun",
+                    precautions: ["濟州家鮑魚粥暖胃首選", "注意 3/8 大型超市公休日", "海岸隧道排隊拍照約 15 分鐘"],
                     alts: [
                         { name: "60年奶奶湯飯", url: "https://naver.me/GDaD7Bmt", desc: "老牌清甜湯頭代表。", transitA: "計程車 8 分", transitB: "凡一站 7 號口", hours: "10:00 - 20:00", address: "16 Jungang-daero" }
                     ],
@@ -198,6 +203,7 @@
                 {
                     day: "Day 6", date: "3/9 (一)", title: "最後血拼與歸途",
                     color: "bg-[#fffbf0]", accent: "text-orange-500", border: "border-orange-200", tape: "bg-orange-400/20",
+                    weather: "Partly Cloudy 6°C - 15°C", weatherIcon: "cloud-sun",
                     precautions: ["17:30 前須抵機場辦退稅", "Centum City 算好回程取行李時間", "下班尖峰計程車易塞"],
                     alts: [
                         { name: "聞名手工刀切麵", url: "https://naver.me/FQVe78vr", desc: "溫泉場站彈牙老店。", transitA: "計程車 15 分", transitB: "溫泉場站 5 分", hours: "11:00 - 20:00", address: "15 Oncheon-ro" },
@@ -244,7 +250,7 @@
                                 { id: 'prep', label: '行前/出入境', icon: 'luggage', color: 'bg-sky-400' },
                                 { id: 'tips', label: '旅遊秘籍', icon: 'lightbulb', color: 'bg-amber-400' }
                             ].map(tab => (
-                                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-5 py-2.5 rounded-sm text-xs font-black transition-all shadow-sm border ${activeTab === tab.id ? `${tab.color} text-white border-transparent scale-105 shadow-md` : 'bg-white text-slate-400 border-slate-200 hover:bg-slate-50'}`}>
+                                <button key={tab.id} onClick={() => setActiveTab(tab.id)} className={`flex items-center gap-2 px-4 md:px-5 py-2.5 rounded-sm text-xs font-black transition-all shadow-sm border ${activeTab === tab.id ? `${tab.color} text-white border-transparent scale-105 shadow-md` : 'bg-white text-slate-400 border-slate-200 hover:bg-slate-50'}`}>
                                     <Icon name={tab.icon} size={14} /> {tab.label}
                                 </button>
                             ))}
@@ -260,7 +266,7 @@
                                     ))}
                                 </div>
 
-                                <div className="bg-white rounded-sm shadow-xl border border-slate-200 p-6 md:p-10 relative overflow-hidden">
+                                <div className="bg-white rounded-sm shadow-xl border border-slate-200 p-6 md:p-10 relative overflow-hidden text-wrap">
                                     <div className="absolute left-[-18px] top-20 bottom-20 flex flex-col justify-between py-10 z-20 pointer-events-none hidden md:flex">
                                         {[1,2,3,4,5,6].map(r => <div key={r} className="binder-ring"></div>)}
                                     </div>
@@ -268,9 +274,14 @@
                                     <div className="relative mb-12 text-center md:text-left">
                                         <div className={`absolute top-[-30px] right-4 w-32 h-10 ${itinerary[activeDay]?.tape} -rotate-6 z-0 shadow-sm`}></div>
                                         <h2 className="text-3xl md:text-5xl font-black text-slate-800 mb-3 relative z-10 font-serif italic tracking-tighter leading-tight">{itinerary[activeDay]?.title}</h2>
-                                        <div className="flex items-center justify-center md:justify-start gap-3 text-slate-400 font-bold text-sm">
-                                            <span className="bg-slate-100 px-4 py-1 rounded-sm text-xs font-black tracking-widest">{itinerary[activeDay]?.day}</span>
-                                            <span>{itinerary[activeDay]?.date}</span>
+                                        <div className="flex flex-col md:flex-row md:items-center gap-3 text-slate-400 font-bold text-sm">
+                                            <div className="flex items-center gap-2">
+                                                <span className="bg-slate-100 px-4 py-1 rounded-sm text-xs font-black tracking-widest uppercase">{itinerary[activeDay]?.day} • {itinerary[activeDay]?.date}</span>
+                                            </div>
+                                            <div className="flex items-center gap-2 text-sky-500 italic">
+                                                <Icon name={itinerary[activeDay]?.weatherIcon} size={16}/>
+                                                <span>{itinerary[activeDay]?.weather}</span>
+                                            </div>
                                         </div>
                                     </div>
 
@@ -305,8 +316,8 @@
                                                             </div>
                                                         </div>
                                                         <div className="space-y-1.5 bg-slate-200/20 p-4 border-l-2 border-slate-300 rounded-r-sm text-xs font-bold text-slate-500">
-                                                            <div className="flex items-center gap-2 text-xs font-bold text-slate-500"><Icon name="clock" size={14}/> {event.hours}</div>
-                                                            <div className="flex items-start gap-2 text-xs font-bold text-slate-400"><Icon name="map-pin" size={14} className="shrink-0 mt-0.5"/> {event.address}</div>
+                                                            <div className="flex items-center gap-2 text-wrap"><Icon name="clock" size={14}/> {event.hours}</div>
+                                                            <div className="flex items-start gap-2 text-wrap text-slate-400"><Icon name="map-pin" size={14} className="shrink-0 mt-0.5"/> {event.address}</div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -340,10 +351,10 @@
                                         </div>
                                     )}
 
-                                    <div className="mt-16 bg-slate-800 rounded-sm p-8 text-white relative overflow-hidden shadow-2xl transform rotate-1">
+                                    <div className="mt-16 bg-slate-800 rounded-sm p-8 text-white relative overflow-hidden shadow-2xl transform rotate-1 text-wrap">
                                         <div className="flex items-center gap-3 mb-6 relative z-10">
                                             <div className="bg-yellow-400 p-2 rounded-sm text-slate-900 shadow-lg"><Icon name="sticky-note" size={24}/></div>
-                                            <h3 className="text-2xl font-black tracking-tight italic uppercase leading-none">Today's Reminders</h3>
+                                            <h3 className="text-2xl font-black tracking-tight italic uppercase leading-none">Today's Notes</h3>
                                         </div>
                                         <ul className="grid grid-cols-1 md:grid-cols-2 gap-4 relative z-10">
                                             {itinerary[activeDay]?.precautions?.map((p, i) => (
@@ -360,7 +371,7 @@
 
                         {activeTab === 'prep' && (
                             <div className="bg-white rounded-sm shadow-xl border border-slate-200 p-8 md:p-12 animate-fade-in relative overflow-hidden text-wrap">
-                                <div className="absolute top-[-10px] left-10 w-40 h-8 bg-sky-200/50 -rotate-2 z-10 border-x-2 border-dashed border-sky-300 text-wrap"></div>
+                                <div className="absolute top-[-10px] left-10 w-40 h-8 bg-sky-200/50 -rotate-2 z-10 border-x-2 border-dashed border-sky-300"></div>
                                 <h2 className="text-4xl font-black text-slate-800 mb-10 flex items-center gap-4 mt-4 font-serif italic text-wrap"><Icon name="luggage" size={40} className="text-sky-500" /> 行前清單 & 出入境</h2>
                                 <div className="grid md:grid-cols-2 gap-12 text-wrap">
                                     <div className="space-y-6">
@@ -397,20 +408,20 @@
 
                         {activeTab === 'tips' && (
                             <div className="bg-white rounded-sm shadow-xl border border-slate-200 p-8 md:p-12 transform relative animate-fade-in text-wrap">
-                                <div className="absolute top-[-10px] left-1/3 w-32 h-8 bg-amber-100/60 rotate-2 z-10 border-x-2 border-dashed border-amber-200 text-wrap"></div>
+                                <div className="absolute top-[-10px] left-1/3 w-32 h-8 bg-amber-100/60 rotate-2 z-10 border-x-2 border-dashed border-amber-200 text-wrap text-wrap"></div>
                                 <h2 className="text-4xl font-black text-slate-800 mb-12 flex items-center gap-4 mt-4 font-serif italic text-wrap"><Icon name="lightbulb" size={40} className="text-amber-500" /> 2026 韓國旅遊秘籍</h2>
                                 <div className="space-y-8 text-wrap">
                                     <div className="bg-amber-50/50 p-8 rounded-sm border-2 border-dashed border-amber-200">
-                                        <div className="grid gap-6">
+                                        <div className="grid gap-6 text-wrap">
                                             {travelInfo.koreaTips2026.map((tip, i) => (
-                                                <div key={i} className="flex gap-4 items-start border-b border-amber-100 pb-6 last:border-0 last:pb-0 text-wrap text-wrap">
+                                                <div key={i} className="flex gap-4 items-start border-b border-amber-100 pb-6 last:border-0 last:pb-0 text-wrap">
                                                     <Icon name="sparkles" size={20} className="text-amber-500 shrink-0" />
                                                     <p className="text-sm md:text-lg font-bold text-slate-700 leading-relaxed text-wrap" dangerouslySetInnerHTML={{ __html: tip }}></p>
                                                 </div>
                                             ))}
                                         </div>
                                     </div>
-                                    <div className="bg-sky-50/50 p-8 rounded-sm border-2 border-dashed border-sky-200 relative overflow-hidden transform -rotate-1 shadow-inner">
+                                    <div className="bg-sky-50/50 p-8 rounded-sm border-2 border-dashed border-sky-200 relative overflow-hidden transform -rotate-1 shadow-inner text-wrap">
                                         <Icon name="wind" size={80} className="absolute -right-6 -bottom-6 text-sky-100 rotate-12 opacity-50" />
                                         <h3 className="font-black text-sky-600 mb-5 flex items-center gap-2 text-2xl tracking-tighter leading-none"><Icon name="wind" size={24}/> 三月釜山穿搭建議</h3>
                                         <p className="text-sm md:text-lg text-slate-600 leading-relaxed font-bold">
@@ -431,8 +442,8 @@
                                             <div className="bg-white p-3 rounded-sm shadow-sm text-pink-400 border border-slate-100 group-hover:scale-110 transition-transform">
                                                 <Icon name="external-link" size={20} />
                                             </div>
-                                            <div className="pr-4 text-wrap">
-                                                <h3 className="font-black text-slate-800 text-lg md:text-xl group-hover:text-pink-600 transition-colors leading-tight">{link.name}</h3>
+                                            <div className="pr-4 text-wrap leading-tight">
+                                                <h3 className="font-black text-slate-800 text-lg md:text-xl group-hover:text-pink-600 transition-colors">{link.name}</h3>
                                                 <p className="text-xs text-slate-400 mt-1 italic font-medium leading-relaxed line-clamp-2">{link.desc}</p>
                                             </div>
                                         </div>
